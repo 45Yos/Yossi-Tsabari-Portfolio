@@ -40,7 +40,7 @@ createProjectCard('MathTrivia', 'Math Trivia');
 createProjectCard('MixDrix', 'Tic Tac Toe');
 createProjectCard('countriesFlags', 'Countries Flags');
 createProjectCard('UsersMamagement', 'Users Mamagement');
-createProjectCard('passwordGenerator', 'Password Generator');
+createProjectCard('PasswordGenerator', 'Password Generator');
 createProjectCard('WeatherApp', 'Weather App');
 
 
