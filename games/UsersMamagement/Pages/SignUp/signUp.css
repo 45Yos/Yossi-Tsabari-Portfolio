@@ -199,3 +199,64 @@ form input:focus {
         transform: translateX(-50%) translateY(-10px);
     }
 }
+
+
+
+#BackTotTop {
+    display: none;
+}
+
+
+
+
+
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    #allDivs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #formDiv,
+    #formDiv2 {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    #backPage {
+        text-decoration: underline #66a6ff;
+        position: relative;
+        padding: 20px;
+        font-size: 1.2rem;
+        margin-bottom: 10%;
+    }
+
+
+
+    #warnning {
+        width: 80%;
+        height: 20vh;
+        font-size: 24px;
+    }
+
+
+    #BackTotTop {
+        display: block;
+        position: static;
+        margin: auto;
+        background-color: #66a6ff;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+}

@@ -237,7 +237,37 @@ signUpButton.addEventListener('click', () => {
             signUpButton.style.opacity = '1';
         }, 3000);
 
-    } else if (email.value.includes('@') === false) {
+
+
+    } else if (password.value.length < 8) {
+
+        warnning.innerHTML = 'Password is not valid! <br> Please try again.';
+        document.body.appendChild(warnning);
+        signUpButton.disabled = true;
+        signUpButton.style.opacity = '0.3';
+
+        setTimeout(() => {
+            warnning.remove();
+            signUpButton.disabled = false;
+            signUpButton.style.opacity = '1';
+        }, 3000);
+
+
+
+    } else if (password.value !== confirmPassword.value) {
+
+        warnning.innerHTML = 'Passwords do not match! <br> Please try again.';
+        document.body.appendChild(warnning);
+        signUpButton.disabled = true;
+        signUpButton.style.opacity = '0.3';
+
+        setTimeout(() => {
+            warnning.remove();
+            signUpButton.disabled = false;
+            signUpButton.style.opacity = '1';
+        }, 3000);
+
+    } else if (email.value.includes('@') === false || email.value.includes('.') === false || emailText.innerHTML !== 'Email is valid!') {
         warnning.innerHTML = 'Email is not valid! <br> Please try again.';
         document.body.appendChild(warnning);
         signUpButton.disabled = true;
@@ -261,6 +291,23 @@ signUpButton.addEventListener('click', () => {
             signUpButton.disabled = false;
             signUpButton.style.opacity = '1';
         }, 3000);
+
+
+
+    } else if (phone.value.length !== 10 || phoneText.innerHTML !== 'Phone number is valid!') {
+
+        warnning.innerHTML = 'Phone number is not valid! <br> Please try again.';
+        document.body.appendChild(warnning);
+        signUpButton.disabled = true;
+        signUpButton.style.opacity = '0.3';
+
+        setTimeout(() => {
+            warnning.remove();
+            signUpButton.disabled = false;
+            signUpButton.style.opacity = '1';
+        }, 3000);
+
+
     } else {
 
 
