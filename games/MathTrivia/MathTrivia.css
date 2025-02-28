@@ -8,6 +8,8 @@
      height: 100vh;
  }
 
+
+ /* Music Button */
  #musicButton {
      position: absolute;
      top: 10%;
@@ -37,6 +39,12 @@
  }
 
 
+
+
+
+
+
+ /* Welcome Screen */
  #welcomeScreen {
      margin: auto;
      position: absolute;
@@ -46,7 +54,7 @@
      right: 0;
      width: 80%;
      height: 80vh;
-     background: url(./Images/MathTriviaWelcome.jpeg) no-repeat center center fixed;
+     background: url(./images/MathTriviaWelcome.jpeg) no-repeat center center fixed;
      background-size: cover;
      z-index: 999;
  }
