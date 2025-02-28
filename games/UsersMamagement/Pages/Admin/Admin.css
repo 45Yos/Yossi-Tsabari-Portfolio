@@ -27,6 +27,10 @@
        transform: scale(0.95);
    }
 
+
+
+
+
    .container {
        width: 95%;
        margin: auto;
@@ -254,188 +258,7 @@
 
 
 
-   body {
-       font-family: Arial, sans-serif;
-       background: #f4f4f4;
-       text-align: center;
-   }
 
-   #logOutButton {
-       background: linear-gradient(135deg, #ff4b5c, #ff6b81);
-       position: absolute;
-       left: 47.5%;
-       color: white;
-       font-size: 16px;
-       font-weight: bold;
-       padding: 10px 10px;
-       border: none;
-       border-radius: 8px;
-       cursor: pointer;
-       transition: background 0.3s, transform 0.2s;
-   }
-
-   #logOutButton:hover {
-       background: linear-gradient(135deg, #ff6b81, #ff4b5c);
-       transform: scale(1.05);
-   }
-
-   #logOutButton:active {
-       transform: scale(0.95);
-   }
-
-   .container {
-       width: 95%;
-       margin: auto;
-       background: rgba(159, 255, 234, 0.254);
-       padding: 20px;
-       border-radius: 10px;
-       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-   }
-
-   #addUser {
-       background: #169b4e;
-       color: white;
-       border: none;
-       border-radius: 25px;
-       padding: 6px 20px;
-       font-size: 16px;
-       font-weight: bold;
-       cursor: pointer;
-       box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-       transition: all 0.3s ease;
-   }
-
-   #addUser:hover {
-       background: #27ae60;
-       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-   }
-
-   #deleteSelected {
-       display: none;
-   }
-
-   h2 {
-       color: white;
-       font-size: 50px;
-       font-weight: bold;
-       text-transform: uppercase;
-       letter-spacing: 2px;
-       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.758);
-       padding: 10px 0;
-       border-bottom: 5px solid rgba(255, 255, 255, 0.761);
-   }
-
-   table {
-       width: 100%;
-       border-collapse: collapse;
-       margin-top: 10px;
-   }
-
-   th,
-   td {
-       padding: 5px;
-       border-bottom: 1px solid #ddd;
-       text-align: left;
-       max-width: 80px;
-   }
-
-   th {
-       background: #66a6ff;
-       color: white;
-       font-size: 14px;
-   }
-
-   .btn {
-       padding: 8px 12px;
-       border: none;
-       border-radius: 5px;
-       cursor: pointer;
-       margin: 5px;
-   }
-
-   .btn-delete {
-       background: red;
-       color: white;
-       border: none;
-       border-radius: 30px;
-       padding: 6px 10px;
-       font-size: 16px;
-       font-weight: bold;
-       cursor: pointer;
-       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-       transition: all 0.3s ease;
-   }
-
-   .btn-add {
-       background: green;
-       color: white;
-   }
-
-   .btn:hover {
-       opacity: 0.8;
-   }
-
-   #editButton {
-       background: #f1c40f;
-       color: white;
-       border: none;
-       border-radius: 30px;
-       padding: 6px 10px;
-       font-size: 16px;
-       font-weight: bold;
-       cursor: pointer;
-       transition: all 0.3s ease;
-   }
-
-   #editButton:hover {
-       background: #f39c12;
-       box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-   }
-
-   #saveButton {
-       background: #4CAF50;
-       color: white;
-       border: none;
-       border-radius: 30px;
-       padding: 6px 10px;
-       font-size: 16px;
-       font-weight: bold;
-       cursor: pointer;
-       transition: all 0.3s ease;
-   }
-
-   #saveButton:hover {
-       background: #45a049;
-       box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-   }
-
-   #row {
-       height: 50px;
-   }
-
-   .loginFormInput {
-       width: 95%;
-       border: 1px solid #ccc;
-       border-radius: 4px;
-       box-sizing: border-box;
-       position: relative;
-   }
-
-   #signedSuccessfully {
-       position: fixed;
-       top: 30%;
-       left: 50%;
-       transform: translateX(-50%);
-       background: rgba(46, 204, 113, 0.9);
-       color: white;
-       font-size: 25px;
-       font-weight: bold;
-       padding: 15px 45px;
-       border-radius: 8px;
-       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-       opacity: 0;
-       animation: fadeInOut 3s ease-in-out;
-   }
 
    @keyframes fadeInOut {
        0% {
@@ -470,6 +293,7 @@
        }
 
        .container {
+           width: 160%;
            display: block;
            padding: 10px;
        }
@@ -485,6 +309,7 @@
 
        table thead tr th {
            border: 2px solid #ddd;
+           font-size: 8px;
        }
 
        th,
@@ -492,12 +317,23 @@
            padding: 3px;
        }
 
+
+       #tdEdit {
+           width: 10%;
+       }
+
+       #tdDelete {
+           width: 100%;
+           display: flex;
+       }
+
+
        #logOutButton,
        #addUser,
        #editButton,
        #saveButton,
        .btn-delete {
-           font-size: 14px;
+           font-size: 10px;
            padding: 5px 8px;
        }
 
@@ -505,4 +341,7 @@
            left: 50%;
            transform: translateX(-50%);
        }
+
+
+
    }

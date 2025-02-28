@@ -1,3 +1,5 @@
+
+// Get All Users From Local Storage
 const localStorageUsers = JSON.parse(localStorage.getItem('users'));
 const userTable = document.getElementById('userTable');
 const container = document.getElementById('container');
@@ -6,7 +8,7 @@ const deleteSelectedButton = document.getElementById('deleteSelected');
 
 
 
-
+// Log Out Button
 const logOutButton = document.getElementById('logOutButton');
 logOutButton.addEventListener('click', () => {
     window.location.href = '../../UsersMamagement.html';
@@ -20,21 +22,19 @@ logOutButton.addEventListener('click', () => {
 
 
 
-
+// Sort Users By ID
 function sortId() {
     localStorageUsers.sort((a, b) => a.id - b.id);
 }
 sortId();
 
 
-
+// Check All Checkboxes
 const allCheckboxes = document.querySelectorAll('.userCheckbox');
-
-
 let checked = 0;
 
 
-
+// Create Table For Each User
 localStorageUsers.forEach(user => {
     const row = document.createElement('tr');
 
@@ -56,6 +56,11 @@ localStorageUsers.forEach(user => {
 
 
 
+
+
+
+
+    // Create Edit, Save, Delete Buttons
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.className = 'userCheckbox';
@@ -72,6 +77,11 @@ localStorageUsers.forEach(user => {
     });
 
 
+
+
+
+
+    // Edit Button
     const editButton = document.createElement('button');
     editButton.id = 'editButton';
     editButton.textContent = 'Edit';
@@ -161,17 +171,6 @@ localStorageUsers.forEach(user => {
 
         }
 
-        // updateUser(elements.username);
-        // updateUser(elements.password);
-        // updateUser(elements.email);
-        // updateUser(elements.phone);
-        // updateUser(elements.address);
-        // updateUser(elements.city);
-        // updateUser(elements.country);
-        // updateUser(elements.birthDay);
-        // updateUser(elements.petName);
-        // updateUser(elements.nameOfFather);
-        // updateUser(elements.oldLastNameOfMother);
 
         Object.values(elements).forEach(updateUser);
 
@@ -230,6 +229,8 @@ localStorageUsers.forEach(user => {
 
     });
 
+
+
     const deleteButton = document.createElement('button');
     deleteButton.className = 'btn btn-delete';
     deleteButton.textContent = 'Delete';
@@ -240,10 +241,12 @@ localStorageUsers.forEach(user => {
     });
 
     const tdEdit = document.createElement('td');
+    tdEdit.id = 'tdEdit';
     tdEdit.appendChild(editButton);
     tdEdit.appendChild(saveButton);
 
     const tdDelete = document.createElement('td');
+    tdDelete.id = 'tdDelete';
     tdDelete.appendChild(deleteButton);
     tdDelete.appendChild(checkbox);
 
