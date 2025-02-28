@@ -3,7 +3,7 @@ let isLogin = localStorage.getItem('isLogin');
 
 
 if (isLogin === 'true') {
-    window.location.href = './pages/Admin/admin.html';
+    window.location.href = './Pages/Admin/Admin.html';
 }
 
 
@@ -104,7 +104,7 @@ logInButton.addEventListener('click', () => {
 
     if (localStorageUsers && localStorageUsers.find(user => user.username === username && user.password === password)) {
         isLogin = true;
-        window.location.href = './pages/Admin/admin.html';
+        window.location.href = './Pages/Admin/Admin.html';
         localStorage.setItem('isLogin', true);
     } else {
         const errorPopup = document.createElement('div');
