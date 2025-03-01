@@ -36,6 +36,111 @@ const stopAudio = () => {
 
 
 
+
+
+
+
+
+
+
+// Contace Me PopUp
+let popUp = 0;
+const contactMe = document.getElementById("contactMe");
+contactMe.addEventListener('click', () => {
+    if (popUp === 0) {
+        popUp++;
+
+        const contactMePopUp = document.createElement("div");
+        contactMePopUp.id = "contactMePopUp";
+
+        const contactMeTitle = document.createElement("h2");
+        contactMeTitle.innerHTML = "Contact Me";
+
+        const contactMeForm = document.createElement("form");
+        contactMeForm.id = "contactMeForm";
+
+        const contactMeName = document.createElement("input");
+        contactMeName.type = "text";
+        contactMeName.placeholder = "Name";
+
+        const contactMeEmail = document.createElement("input");
+        contactMeEmail.type = "email";
+        contactMeEmail.placeholder = "Email";
+
+        const contactMeMessage = document.createElement("textarea");
+        contactMeMessage.placeholder = "Message";
+
+
+
+        const buttonsDiv = document.createElement("div");
+        buttonsDiv.id = "buttonsDiv";
+
+        const whatsAppButton = document.createElement("a");
+        whatsAppButton.innerHTML = ` <i id="whatsAppIcon" class="fa-brands fa-whatsapp" style="color:rgb(32, 211, 19);"></i>`;
+        whatsAppButton.addEventListener('click', () => {
+            const message = encodeURIComponent(`Hi Im ${contactMeName.value}\nAnd My Email Is ${contactMeEmail.value}\nI Just Wanted To Say ${contactMeMessage.value}`);
+            const url = `https://wa.me/972546215464?text=${message}`;
+            window.open(url, '_blank');
+        });
+
+
+        const gmailButton = document.createElement("a");
+        gmailButton.innerHTML = ` <i id="gmailIcon" class="fa-brands fa-google" style="color:rgb(219, 52, 52);"></i>`;
+
+        gmailButton.addEventListener('click', () => {
+            const message = encodeURIComponent(`Hi Im ${contactMeName.value}\nAnd My Email Is ${contactMeEmail.value}\nI Just Wanted To Say ${contactMeMessage.value}`);
+            const url = `https://mail.google.com/mail/?view=cm&fs=1&to=tyossi91@gmail.com&su=${contactMeName.value}&body=${message}`;
+            window.open(url, '_blank');
+        });
+
+
+
+        const exitPopUp = document.createElement("a");
+        exitPopUp.innerHTML = "X";
+        exitPopUp.id = "exitPopUp";
+        exitPopUp.addEventListener('click', () => {
+            popUp = 0;
+            contactMePopUp.remove();
+        });
+
+
+
+        document.body.appendChild(contactMePopUp);
+
+        contactMePopUp.appendChild(contactMeTitle);
+        contactMePopUp.appendChild(contactMeForm);
+        contactMePopUp.appendChild(exitPopUp);
+
+        contactMeForm.appendChild(contactMeName);
+        contactMeForm.appendChild(contactMeEmail);
+        contactMeForm.appendChild(contactMeMessage);
+        contactMeForm.appendChild(buttonsDiv);
+
+
+        buttonsDiv.appendChild(whatsAppButton);
+        buttonsDiv.appendChild(gmailButton);
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const weatherWidget = document.getElementById("weather-widget");
 const weatherWidgetTime = document.getElementById("time");
 const temp = document.getElementById("temp");
@@ -57,9 +162,6 @@ const Weather = async () => {
     let humiditySpecs = data.hourly.relative_humidity_2m[0];
     let wind = data.current.wind_speed_10m;
 
-
-
-    // console.log('Weather:', data);
 
 
     currentTimeZone = "Tel Aviv";
