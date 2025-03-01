@@ -26,7 +26,6 @@ const stopAudio = () => {
     if (backgroundAudio.paused) {
         backgroundAudio.play();
         PlayText.innerHTML = "Pause"
-        return;
     } else {
         backgroundAudio.pause();
         backgroundAudio.currentTime = 0;

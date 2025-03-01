@@ -94,12 +94,26 @@ header nav ul button {
     top: 2%;
 }
 
+
+#Play {
+    position: absolute;
+    margin-top: 0;
+    left: 31%;
+}
+
 #PlayText {
     position: absolute;
     margin-top: 0;
-    left: 37.8%;
+    left: 33%;
 }
 
+
+header nav ul img {
+    width: 35px;
+    height: 35px position absolute;
+    z-index: 1;
+    cursor: pointer;
+}
 
 
 header nav ul li {
@@ -859,6 +873,7 @@ header nav ul li a {
 
 
 
+
 /* מדיה קווירי עבור מסכים עד רוחב של 450 פיקסלים */
 @media (max-width: 480px) {
     body {
@@ -877,8 +892,7 @@ header nav ul li a {
     }
 
     header nav ul {
-        /* flex-direction: column; */
-        align-items: center;
+        font-size: 11px;
         padding: 0;
         margin: 0;
     }
@@ -896,6 +910,22 @@ header nav ul li a {
     header nav ul p {
         top: 0.8%;
         margin-left: -37%;
+    }
+
+
+    #Play {
+        width: 8%;
+        left: 0;
+        top: 0;
+    }
+
+    header nav ul img {
+        width: 80%;
+    }
+
+    #PlayText {
+        left: 38%;
+        top: 4vh;
     }
 
 
