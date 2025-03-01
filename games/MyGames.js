@@ -42,6 +42,7 @@ createProjectCard('countriesFlags', 'Countries Flags');
 createProjectCard('UsersMamagement', 'Users Mamagement');
 createProjectCard('PasswordGenerator', 'Password Generator');
 createProjectCard('WeatherApp', 'Weather App');
+createProjectCard('Pong', 'Classic Pong');
 
 
 
