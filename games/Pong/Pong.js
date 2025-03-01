@@ -41,7 +41,18 @@ const winSound = [
     new Audio('./Sound/Win/Win1.mp3'),
     new Audio('./Sound/Win/Win2.wav'),
     new Audio('./Sound/Win/Win3.wav'),
-]
+    new Audio('./Sound/Win/Win4.wav'),
+    new Audio('./Sound/Win/Win5.wav'),
+];
+
+
+// Lose Sound
+const loseSound = [
+    new Audio('./Sound/Lose/Lose1.wav'),
+    new Audio('./Sound/Lose/Lose2.wav'),
+    new Audio('./Sound/Lose/Lose3.wav'),
+    new Audio('./Sound/Lose/Lose4.wav'),
+];
 
 
 
@@ -258,6 +269,7 @@ function startGame() {
         // AI Score
         if (ballX - ballSize <= 0) {
             aiScore++;
+            loseSound[Math.floor(Math.random() * loseSound.length)].play();
             resetBall();
         }
 

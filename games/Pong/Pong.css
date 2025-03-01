@@ -76,3 +76,24 @@ canvas {
     border-radius: 5px;
     cursor: pointer;
 }
+
+
+
+@media (max-width: 480px) {
+    #welcomeText {
+        font-size: 18px;
+        width: 80%;
+    }
+
+    #difficultyLevel {
+        font-size: 14px;
+    }
+
+    #startButton {
+        font-size: 18px;
+    }
+
+    #exitButton {
+        font-size: 18px;
+    }
+}
