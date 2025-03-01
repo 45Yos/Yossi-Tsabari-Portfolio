@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+
+
 html,
 body {
     margin: 0;
@@ -78,22 +80,26 @@ canvas {
 }
 
 
+@media (max-width: 768px) {
 
-@media (max-width: 480px) {
-    #welcomeText {
-        font-size: 18px;
-        width: 80%;
+    #welcomeScreen {
+        display: none
     }
 
-    #difficultyLevel {
-        font-size: 14px;
-    }
 
-    #startButton {
-        font-size: 18px;
-    }
 
-    #exitButton {
-        font-size: 18px;
+    #mobileScreen {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+        color: white;
+        z-index: 999;
+        border: 2px solid white;
     }
 }

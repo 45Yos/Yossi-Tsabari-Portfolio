@@ -1,3 +1,11 @@
+
+const mobileScreen = document.createElement("div");
+mobileScreen.id = "mobileScreen";
+mobileScreen.innerHTML = "This Game Is Not Supported On Mobile Devices";
+document.body.appendChild(mobileScreen);
+
+
+
 const canvas = document.getElementById("pongCanvas");
 const ctx = canvas.getContext("2d");
 
