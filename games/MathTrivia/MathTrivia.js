@@ -257,7 +257,7 @@ submitAnswer.addEventListener('click', () => {
 
 
 
-            console.log('Correct: ' + correct);
+
             sum = 0;
             questionTitle.innerHTML = '<br>';
             answerInput.value = '';
@@ -308,22 +308,9 @@ submitAnswer.addEventListener('click', () => {
 
 
 
-            resultsContainer.style.height = '200px';
-            resultsContainer.style.transform = 'scale(2.5)';
-            resultsContainer.style.position = 'absolute';
-            resultsContainer.style.top = '38%';
-            resultsContainer.style.backgroundImage = 'url(./images/BackgroundScore.jpeg)';
-            resultsContainer.style.backgroundSize = 'cover';
-            resultsContainer.style.backgroundRepeat = 'no-repeat';
-            resultsContainer.style.backgroundPosition = '50% 90%';
-
-            resultsTitle.style.color = '#ff007a';
-            resultsTitle.style.textShadow = '0px 0px 2px white, 0px 0px 3px white, 0px 0px 5px #ff007a';
-            resultsText.style.textShadow = '0px 0px 2px black, 0px 0px 3px white, 0px 0px 5px black';
-            resultsTitle.style.fontSize = '40px';
+            resultsContainer.style.display = 'block';
 
 
-            resultsText.style.fontSize = '30px';
 
 
             historyDiv.style.bottom = '0';

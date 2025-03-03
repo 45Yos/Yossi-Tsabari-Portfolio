@@ -339,6 +339,20 @@
 
 
 
+
+ #results-container {
+     height: 200px;
+     width: 20%;
+     transform: scale(2.5);
+     position: absolute;
+     top: 38%;
+     background-image: url(./images/BackgroundScore.jpeg);
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: 50% 90%;
+     display: none;
+ }
+
  .results {
      margin-top: 20px;
      background: rgba(255, 255, 255, 0.1);
@@ -347,6 +361,18 @@
      border: 2px solid rgba(255, 255, 255, 0.3);
      box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
      text-align: center;
+ }
+
+
+ #resultsTitle {
+     color: #ff007a;
+     text-shadow: 0px 0px 2px white, 0px 0px 3px white, 0px 0px 5px #ff007a;
+     font-size: 40px;
+ }
+
+
+ #resultsText {
+     fontSize: 30px;
  }
 
  .results h3 {
@@ -399,13 +425,8 @@
 
  #startAllOver:hover {
      background: linear-gradient(245deg, #8e44ad, #3498db, #2ecc71);
-     transform: scale(0.5);
+     transform: scale(0.4);
      box-shadow: 0 0 30px rgba(6, 214, 160, 0.8), 0 0 30px rgba(17, 138, 178, 0.8);
- }
-
- #startAllOver:hover::after {
-     transform: scale(1);
-     opacity: 1;
  }
 
  #startAllOver:active {
@@ -433,7 +454,7 @@
      text-align: center;
      font-size: 30px;
      gap: 1px;
-     margin-top: 3.5%;
+     margin-top: 12%;
  }
 
 
@@ -490,9 +511,28 @@
          margin-top: 45%;
      }
 
+
+     #history {
+         flex-wrap: wrap;
+     }
+
+
+     #lastQuestion {
+         width: 80%;
+         height: 100%;
+         text-align: center;
+         font-size: 30px;
+         gap: 1px;
+         margin: 3.5% auto;
+     }
+
+
+
+
+
      #musicButton {
-         top: 80%;
-         right: 30%;
+         position: static;
+         margin: auto 30%;
      }
 
      #counterText {
@@ -533,8 +573,35 @@
      }
 
      #startAllOver {
-         width: 100%;
+         display: block;
+         margin: auto -64%;
          height: 50px;
          font-size: 16px;
      }
+
+
+     #results-container {
+         height: 50vh;
+         width: 33%;
+         position: absolute;
+         top: 38%;
+         background-image: url(./images/BackgroundScore.jpeg);
+         background-size: cover;
+         background-repeat: no-repeat;
+         background-position: 50% 90%;
+         display: none;
+     }
+
+     #resultsTitle {
+         font-size: 20px;
+     }
+
+
+     #resultsText {
+         font-size: 13px;
+         margin-bottom: 40%;
+     }
+
+
+
  }

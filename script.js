@@ -16,10 +16,11 @@ const startPage = () => {
 const backgroundAudio = new Audio("./Audio/CloudsBack.mp3");
 backgroundAudio.loop = true;
 backgroundAudio.volume = 0.1;
-backgroundAudio.play();
 
 
 const PlayText = document.getElementById("PlayText");
+
+
 
 
 const stopAudio = () => {
@@ -33,6 +34,8 @@ const stopAudio = () => {
     }
 }
 
+
+backgroundAudio.play();
 
 
 
