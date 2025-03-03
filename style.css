@@ -560,10 +560,16 @@ header nav ul li a {
 
 
 
-/*Area 2, About Section*/
+
+
+
+
+
+
+/*About Section*/
 
 #about {
-    height: 40vh;
+    height: 50vh;
     background: url('./Images/AboutArea.webp') no-repeat center center;
     background-size: cover;
     padding: 60px 20px;
@@ -606,6 +612,19 @@ header nav ul li a {
     z-index: 2;
     font-family: 'Georgia', serif;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+#about button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: background-color 0.3s ease;
 }
 
 
