@@ -34,6 +34,9 @@ const allCheckboxes = document.querySelectorAll('.userCheckbox');
 let checked = 0;
 
 
+
+
+
 // Create Table For Each User
 localStorageUsers.forEach(user => {
     const row = document.createElement('tr');
